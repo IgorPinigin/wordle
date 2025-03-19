@@ -25,12 +25,14 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy to dev
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to dev via SSH
+        uses: appleboy/scp-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages-dev # Отдельная ветка для dev
+          host: ${{ secrets.SSH_HOST }} # IP или домен вашего сервера
+          username: ${{ secrets.SSH_USERNAME }} # Пользователь SSH
+          password: ${{ secrets.SSH_PASSWORD }} # Пароль для SSH
+          source: "./dist/*"
+          target: "/var/www/linkpng.ru/dev"
 
   deploy-prod:
     runs-on: ubuntu-latest
@@ -51,9 +53,11 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy to prod
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Deploy to prod via SSH
+        uses: appleboy/scp-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages # Отдельная ветка для prod
+          host: ${{ secrets.SSH_HOST }} # IP или домен вашего сервера
+          username: ${{ secrets.SSH_USERNAME }} # Пользователь SSH
+          password: ${{ secrets.SSH_PASSWORD }} # Пароль для SSH
+          source: "./dist/*"
+          target: "/var/www/linkpng.ru/prod"
