@@ -25,6 +25,9 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Debug working directory
+        run: ls -R
+
       - name: Deploy to dev
         uses: peaceiris/actions-gh-pages@v3
         with:
@@ -50,6 +53,8 @@ jobs:
 
       - name: Build project
         run: npm run build
+
+
 
       - name: Deploy to prod
         uses: peaceiris/actions-gh-pages@v3
