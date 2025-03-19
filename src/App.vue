@@ -94,7 +94,7 @@ body {
 .game-back {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(#dce35b, #45b649);
+  background-image: linear-gradient(#fd6a30, #45b649);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
