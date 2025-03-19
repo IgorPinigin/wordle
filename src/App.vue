@@ -9,8 +9,6 @@ const keyboardTargets = ref({});
 const inputField = ref(null);
 const inputValue = ref("");
 
-//Просто коммент
-
 const checkWord = () => {
   if (arrayWord.value.length === 5) {
     let target = [];
