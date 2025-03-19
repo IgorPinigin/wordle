@@ -39,8 +39,6 @@ onMounted(() => {
   inputField.value.focus();
 });
 
-// asdasd
-
 const arrayWord = computed(() => {
   if (inputValue.value.length > 4) {
     inputValue.value = inputValue.value.slice(0, 5);
