@@ -32,7 +32,7 @@ jobs:
         run: |
           echo "Repository: $GITHUB_REPOSITORY"
           echo "Actor: $GITHUB_ACTOR"
-          echo "Token: ${{ secrets.GITHUB_TOKEN }}"
+          echo "Token: ${{ secrets.GH_PAT }}"
 
       - name: Deploy to dev
         uses: peaceiris/actions-gh-pages@v3
