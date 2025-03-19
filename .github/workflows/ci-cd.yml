@@ -28,6 +28,12 @@ jobs:
       - name: Debug working directory
         run: ls -R
 
+      - name: Check permissions
+        run: |
+          echo "Repository: $GITHUB_REPOSITORY"
+          echo "Actor: $GITHUB_ACTOR"
+          echo "Token: ${{ secrets.GITHUB_TOKEN }}"
+
       - name: Deploy to dev
         uses: peaceiris/actions-gh-pages@v3
         with:
