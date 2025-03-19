@@ -31,7 +31,7 @@ jobs:
       - name: Deploy to dev
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_PAT }}
           publish_dir: ./dist
           destination_dir: dev # Папка для dev-версии
 
@@ -59,6 +59,6 @@ jobs:
       - name: Deploy to prod
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GH_PAT }}
           publish_dir: ./dist
           destination_dir: prod # Папка для prod-версии
