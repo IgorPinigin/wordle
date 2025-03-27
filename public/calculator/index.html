@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Калькулятор</title>
+    <script src="./modules/calcMethods.js" type="module"></script>
+    <script src="./script.js" defer type="module"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="calc-bg">
+      <h1>Калькулятор на чистом JS</h1>
+      <div id="calc-phone" class="calc-phone">
+        <div>
+          <input class="numbers row" type="text" readonly id="numbers-row" />
+        </div>
+        <div>
+          <input class="equals row" type="text" id="equal-row" />
+        </div>
+        <div class="buttons-row">
+          <button class="button number" type="button">1</button>
+          <button class="button number" type="button">2</button>
+          <button class="button number" type="button">3</button>
+          <button class="button clear" type="button">ac</button>
+        </div>
+        <div class="buttons-row">
+          <button class="button number" type="button">4</button>
+          <button class="button number" type="button">5</button>
+          <button class="button number" type="button">6</button>
+          <button class="button delete" type="button">del</button>
+        </div>
+        <div class="buttons-row">
+          <button class="button number" type="button">7</button>
+          <button class="button number" type="button">8</button>
+          <button class="button number" type="button">9</button>
+          <button class="button action" type="button">/</button>
+        </div>
+        <div class="buttons-row">
+          <button class="button number" type="button">0</button>
+          <button class="button action" type="button">-</button>
+          <button class="button action" type="button">+</button>
+          <button class="button action" type="button">*</button>
+        </div>
+        <div class="buttons-row">
+          <button class="button action" type="button">.</button>
+          <button class="button equal" type="button">=</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
